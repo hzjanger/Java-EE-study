@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+group 'com.hzj'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    // and optionally...
+    maven { url "http://repo.spring.io/release" }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    // https://mvnrepository.com/artifact/org.springframework/spring-core
+    compile group: 'org.springframework', name: 'spring-core', version: '4.2.5.RELEASE'
+    // https://mvnrepository.com/artifact/org.springframework/spring-beans
+    compile group: 'org.springframework', name: 'spring-beans', version: '4.2.5.RELEASE'
+    // https://mvnrepository.com/artifact/org.springframework/spring-context
+    compile group: 'org.springframework', name: 'spring-context', version: '4.2.5.RELEASE'
+    // https://mvnrepository.com/artifact/org.springframework/spring-expression
+    compile group: 'org.springframework', name: 'spring-expression', version: '4.2.5.RELEASE'
+    // https://mvnrepository.com/artifact/log4j/log4j
+    compile group: 'log4j', name: 'log4j', version: '1.2.17'
+    // https://mvnrepository.com/artifact/junit/junit
+    compile group: 'junit', name: 'junit', version: '4.12'
+
+
+
+}
