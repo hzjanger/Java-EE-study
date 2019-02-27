@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="user1" class="assemble.ComplexUser">
+        <constructor-arg type="java.lang.String" value="chengheng1"/>
+        <constructor-arg type="java.util.List">
+            <list>
+                <value>唱歌</value>
+                <value>跳舞</value>
+                <value>爬山</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg type="java.lang.String[]">
+            <array>
+                <value>aaaaa</value>
+                <value>bbbbb</value>
+            </array>
+        </constructor-arg>
+        <constructor-arg type="java.util.Map">
+            <map>
+                <entry key="dalian" value="大连"/>
+                <entry key="beijian" value="北京"/>
+                <entry key="shanghai" value="上海"/>
+            </map>
+        </constructor-arg>
+        <constructor-arg type="java.util.Set">
+            <set>
+                <value>程恒100</value>
+                <value>程恒101</value>
+                <value>程恒102</value>
+            </set>
+        </constructor-arg>
+
+
+    </bean>
+
+    <bean id="complexUser2" class="assemble.ComplexUser">
+        <property name="name" value="成成2"/>
+        <property name="aliasSet">
+            <set>
+                <value>看书</value>
+                <value>学习</value>
+            </set>
+        </property>
+        <property name="array">
+            <array>
+                <value>ccccc</value>
+                <value>ddddd</value>
+            </array>
+        </property>
+        <property name="hobbyList">
+            <list>
+                <value>读书</value>
+                <value>写字</value>
+            </list>
+        </property>
+        <property name="residenceMap">
+            <map>
+                <entry key="shenzheng" value="深圳"/>
+            </map>
+        </property>
+    </bean>
+</beans>
